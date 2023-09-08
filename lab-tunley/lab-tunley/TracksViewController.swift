@@ -30,7 +30,22 @@ class TracksViewController: UIViewController, UITableViewDataSource {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO: Pt 1 - Pass the selected track to the detail view controller
+        
+        // Pt 1 - Pass the selected track to the detail view controller
+        
+        // Get the cell that triggered the segue
+        if let cell = sender as? UITableViewCell,
+           // Get the index path of the cell from the table view
+           let indexPath = tableView.indexPath(for: cell),
+           // Get the detail view controller
+           let detailViewController = segue.destination as? DetailViewController {
+
+            // Use the index path to get the associated track
+            let track = tracks[indexPath.row]
+
+            // Set the track on the detail view controller
+            detailViewController.track = track
+        }
 
 
     }
