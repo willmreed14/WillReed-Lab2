@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="jrM-aA-CKz" customClass="TrackCell" customModule="lab_tunley" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackCell" rowHeight="160" id="jrM-aA-CKz" customClass="TrackCell" customModule="lab_tunley" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jrM-aA-CKz" id="4cE-83-e27">
@@ -65,6 +65,11 @@
                                                 <constraint firstItem="9cc-DA-5bg" firstAttribute="leading" secondItem="4cE-83-e27" secondAttribute="leading" constant="16" id="pJb-gb-gBZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistNameLabel" destination="WR4-1R-Ybf" id="B76-94-pQF"/>
+                                            <outlet property="trackImageView" destination="sOH-7r-xCw" id="1Lu-ax-sbQ"/>
+                                            <outlet property="trackNameLabel" destination="Lk0-2C-Kfd" id="rtH-jB-LlW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
