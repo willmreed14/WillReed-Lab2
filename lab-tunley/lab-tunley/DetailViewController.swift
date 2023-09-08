@@ -3,6 +3,7 @@
 //  lab-tunley
 //
 //  Created by Charlie Hieger on 12/5/22.
+//  Edited by William Reed on 9/8/23.
 //
 
 import UIKit
@@ -18,14 +19,17 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
-
-    // TODO: Pt 1 - Add a track property
-
+    
+    
+    // Pt 1 - Add a track property
+    // A property to store the track object.
+    // We can set this property by passing along the track object associated with the track the user tapped in the table view.
+    var track: Track!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // TODO: Pt 1 - Configure the UI elements with the passed in track
+        // Pt 1 - Configure the UI elements with the passed in track
 
 
     }
