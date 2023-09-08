@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Nuke
 
 class TrackCell: UITableViewCell {
     
@@ -25,6 +26,15 @@ class TrackCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    // Configures the cell's UI for the given track.
+    func configure(with track: Track) {
+        trackNameLabel.text = track.trackName
+        artistNameLabel.text = track.artistName
+
+        // Load image async via Nuke library image loading helper method
+        Nuke.loadImage(with: track.artworkUrl100, into: trackImageView)
     }
 
 }
