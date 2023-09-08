@@ -42,7 +42,18 @@ class TracksViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        // Get a cell with identifier, "TrackCell"
+        // the `dequeueReusableCell(withIdentifier:)` method just returns a generic UITableViewCell so it's necessary to cast it to our specific custom cell.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrackCell", for: indexPath) as! TrackCell
+
+        // Get the track that corresponds to the table view row
+        let track = tracks[indexPath.row]
+
+        // Configure the cell with it's associated track
+        cell.configure(with: track)
+
+        // return the cell for display in the table view
+        return cell
     }
     
 
