@@ -49,6 +49,18 @@ class TracksViewController: UIViewController, UITableViewDataSource {
 
 
     }
+    
+    // Deselect the table view row after viewing details.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Get the index path for the current selected table view row (if exists)
+        if let indexPath = tableView.indexPathForSelectedRow {
+
+            // Deselect the row at the corresponding index path
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 
     // Pt 1 - Add table view data source methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
